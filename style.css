@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+body {
+    background: url("img/confectionary.png");
+}
+
+.clear-fix {
+    clear: both;
+}
+
+/* navbar */
+.navbar {
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1B9CE2;
+    box-shadow: darkgray 3px 3px 5px 0;
+    position: fixed;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0 30px;
+}
+
+.navbar ul li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+.navbar ul li:hover {
+    background-color: orange;
+    color: black;
+}
+
+/* scroll to top box*/
+.scrollToTop {
+    position: fixed;
+    z-index: 100;
+    bottom: 50px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+}
+
+/* jumbotron */
+.jumbotron {
+    margin-top: 60px;
+    width: 100%;
+    height: 700px;
+    background-size: contain;
+    background: url("img/digital-014.jpg") no-repeat fixed center;
+    box-shadow: grey 5px 5px 10px 0;
+}
+
+.jumbotron .name {
+    position: relative;
+    width: 550px;
+    top: 100px;
+    color: #fccdd3;
+    margin: 0 auto;
+    font-size: 100px;
+}
+
+.jumbotron .intro {
+    position: relative;
+    top: 200px;
+    left: 50px;
+    width: 550px;
+    margin: 0 auto;
+    color: #fccdd3;
+    font-size: 50px;
+}
+
+.jumbotron .intro ul li {
+    padding: 10px 0;
+}
+
+/* Education */
+.education {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    background-color: #466A8F;
+}
+
+.education .title {
+    margin-top: 40px;
+    margin-left: 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.education ul {
+    list-style-type: none;
+}
+
+.education ul li {
+    position: relative;
+    margin: 0 auto;
+    width: 6px;
+    background-color: white;
+    padding-top: 50px;
+}
+
+.education ul li::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    left: 50%;
+    bottom: 0;
+    background-color: inherit;
+    transform: translateX(-50%);
+}
+
+
+.education ul li .timeline-content::before {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    width: 0;
+    height: 0;
+    border: 5px solid #F25D6C;
+    transform: rotate(45deg);
+}
+
+
+.education ul li:nth-child(odd) .timeline-content::before {
+    left: -4px;
+}
+
+.education ul li:nth-child(even) .timeline-content::before {
+    right: -4px;
+}
+
+.education ul li .timeline-content {
+    position: relative;
+    width: 400px;
+    background-color: #F25D6C;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.education ul li:nth-child(odd) .timeline-content {
+    margin-left: 50px;
+}
+
+.education ul li:nth-child(even) .timeline-content {
+    left: -450px;
+}
+
+.education ul li .timeline-time {
+    margin-left: 0;
+    font-size: 30px;
+    color: white;
+}
+
+.education .timeline-content .university {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.education .timeline-content p {
+    margin: 10px 0;
+}
+
+.education .timeline-content .achievement {
+    font-weight: bold;
+    color: mediumspringgreen;
+}
+
+/* skill set */
+.skill_set {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #fae596;
+    padding: 20px 0;
+}
+
+.skill_set .title {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: #3fb0ac;
+}
+
+.skill_set .content {
+    width: 800px;
+    margin: 100px auto;
+}
+
+.skill_set ul {
+    list-style-type: none;
+}
+
+.skill_set ul li {
+    margin: 20px 0;
+}
+
+.skill_group {
+    position: relative;
+    font-size: 30px;
+}
+.skill_name {
+    display: inline-block;
+    color: #1B9CE2;
+}
+
+.skill_level {
+    position: absolute;
+    top: 7px;
+    left: 200px;
+    display: inline-block;
+    width: 500px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill_level_fill {
+    position: relative;
+    height: 20px;
+    left:0;
+
+    background: rgba(52,52,247,1);
+    background: -moz-linear-gradient(left, rgba(52,52,247,1) 0%, rgba(255,191,0,1) 50%, rgba(231,56,39,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,52,247,1)), color-stop(50%, rgba(255,191,0,1)), color-stop(100%, rgba(231,56,39,1)));
+    background: -webkit-linear-gradient(left, rgba(52,52,247,1) 0%, rgba(255,191,0,1) 50%, rgba(231,56,39,1) 100%);
+    background: -o-linear-gradient(left, rgba(52,52,247,1) 0%, rgba(255,191,0,1) 50%, rgba(231,56,39,1) 100%);
+    background: -ms-linear-gradient(left, rgba(52,52,247,1) 0%, rgba(255,191,0,1) 50%, rgba(231,56,39,1) 100%);
+    background: linear-gradient(to right, rgba(52,52,247,1) 0%, rgba(255,191,0,1) 50%, rgba(231,56,39,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3434f7', endColorstr='#e73827', GradientType=1 );
+}
+
+/* projects */
+
+.projects {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #3fb0ac;
+    padding: 20px 0;
+}
+
+.projects .title {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.projects .content {
+    margin: 20px auto;
+    width: 800px;
+    background-color: black;
+}
+
+.projects .image {
+    padding: 30px;
+    text-align: center;
+    width: 30%;
+    float: left;
+}
+
+.projects .detail {
+    padding: 30px;
+    float: left;
+    width: 70%;
+}
+
+.projects .detail-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+.projects ul {
+    margin-left: 10px;
+    padding: 20px 0;
+    list-style-type: circle;
+}
+.projects li {
+    margin: 10px 0;
+}
+
+/* nested ul in project detail */
+.projects ul li ul {
+    padding: 5px 0;
+}
+
+/* history */
+.history {
+    margin-top: 20px;
+    width: 100%;
+    background-color: blueviolet;
+    padding-top: 20px;
+}
+
+.history .title {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.history .content {
+    width: 920px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.history table {
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+.history tr {
+    height: 30px;
+    transition: background-color 0.4s;
+}
+
+.history td {
+    padding: 10px 30px;
+}
+
+.history tr td:first-child {
+    width: 30%;
+}
+
+.history tr.section-title {
+    font-weight: bold;
+}
+
+.history tr:nth-child(odd) {
+    background-color: #efefef;
+}
+
+.history tr:nth-child(even) {
+    background-color: white;
+}
+
+.history tr:hover {
+    background-color: darkcyan;
+}
+
+
+/* contact */
+.contact {
+    margin-top: 20px;
+    width: 100%;
+    background-color: burlywood;
+    padding: 10px;
+}
+
+.contact .title  {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact .content {
+    width: 1200px;
+    margin: 30px auto;
+}
+
+.contact .column {
+    float: left;
+    height: 400px;
+}
+
+.contact .left-column {
+    text-align: center;
+    width: 40%;
+}
+
+.contact .left-column p {
+    font-size: 40px;
+}
+
+.contact ul {
+    font-size: 20px;
+    margin: 20px;
+}
+.contact li {
+    margin-top: 10px;
+}
+
+.contact .right-column {
+    width: 60%;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    background-color: slategray;
+    padding: 20px 0;
+    color: white;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .skill_set .content {
+        width: 768px;
+    }
+    .history .content {
+        width: 800px;
+    }
+    .education ul li .timeline-content {
+        width: 300px;
+    }
+    .education ul li:nth-child(even) .timeline-content {
+        left: -350px;
+    }
+    .contact .content {
+        width: 800px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .jumbotron .name {
+        font-size: 60px;
+        left: 30px;
+        width: 350px;
+    }
+
+    .jumbotron .intro {
+        font-size: 30px;
+        left: 20px;
+        width: 300px;
+    }
+
+    .skill_set .content {
+        width: 500px;
+    }
+    .skill_level {
+        width: 300px;
+    }
+    .history .content {
+        width: 95%;
+    }
+    .education ul li .timeline-content {
+        width: 400px;
+    }
+    .education ul li:nth-child(even) .timeline-content {
+        left: 50px;
+    }
+    .education ul li {
+        margin: 0 30px;
+    }
+
+    .education ul li:nth-child(even) .timeline-content::before {
+        left: -4px;
+    }
+    .projects .content {
+        width: 500px;
+    }
+    .projects .detail {
+        word-break: break-all;
+    }
+    .projects .image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact .content {
+        width: 500px;
+    }
+
+    .contact .column {
+        width: 100%;
+    }
+}
