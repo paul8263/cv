@@ -7,6 +7,9 @@
 body {
     background: url("img/confectionary.png");
 }
+a {
+    word-break: break-all;
+}
 
 .clear-fix {
     clear: both;
@@ -37,6 +40,18 @@ body {
     font-size: 25px;
     color: white;
     transition: background-color 0.6s, color 0.6s;
+}
+
+#toggle, #menu_toggle {
+    display: none;
+}
+
+
+#toggle label {
+    height: 20px;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
 }
 
 .navbar ul li:hover {
@@ -439,6 +454,36 @@ body {
 }
 
 @media screen and (min-width: 500px) and (max-width: 767px) {
+
+    .navbar {
+        position: static;
+    }
+
+    .jumbotron {
+        margin-top: 10px;
+    }
+
+    #toggle {
+        display: block;
+    }
+
+    #menu_toggle:checked ~ .menu-item {
+        display: block;
+    }
+
+    #menu_toggle ~ .menu-item {
+        display: none;
+    }
+
+    .navbar ul li {
+        float: none;
+        display: block;
+    }
+
+    #toggle:hover {
+        background-color: inherit;
+    }
+
     .jumbotron .name {
         font-size: 60px;
         left: 30px;
@@ -476,9 +521,7 @@ body {
     .projects .content {
         width: 500px;
     }
-    .projects .detail {
-        word-break: break-all;
-    }
+
     .projects .image img {
         width: 100px;
         height: 100px;
@@ -486,6 +529,107 @@ body {
 
     .contact .content {
         width: 500px;
+    }
+
+    .contact .column {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .navbar {
+        position: static;
+    }
+
+    .jumbotron {
+        margin-top: 10px;
+    }
+
+    #toggle {
+        display: block;
+    }
+
+    #menu_toggle:checked ~ .menu-item {
+        display: block;
+    }
+
+    #menu_toggle ~ .menu-item {
+        display: none;
+    }
+
+    .navbar ul li {
+        float: none;
+        display: block;
+    }
+
+    #toggle:hover {
+        background-color: inherit;
+    }
+    .jumbotron {
+        height: 500px;
+    }
+
+    .jumbotron .name {
+        top: 50px;
+        font-size: 50px;
+        left: 30px;
+        width: 300px;
+    }
+
+    .jumbotron .intro {
+        font-size: 20px;
+        top: 150px;
+        left: 20px;
+        width: 250px;
+    }
+
+    .skill_set .content {
+        width: 300px;
+        margin: 0 10px;
+    }
+
+    .skill_group {
+        font-size: 20px;
+    }
+
+    .skill_level {
+        left: 150px;
+        width: 200px;
+    }
+    .history .content {
+        width: 95%;
+    }
+    .education ul li .timeline-content {
+        width: 250px;
+    }
+    .education ul li:nth-child(even) .timeline-content {
+        left: 50px;
+    }
+    .education ul li {
+        margin: 0 30px;
+    }
+
+    .education ul li:nth-child(even) .timeline-content::before {
+        left: -4px;
+    }
+    .projects .content {
+        width: 90%;
+    }
+
+    .projects .image {
+        width: 20%;
+    }
+
+    .projects .detail {
+        width: 80%;
+    }
+    .projects .image img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact .content {
+        width: 90%;
     }
 
     .contact .column {
