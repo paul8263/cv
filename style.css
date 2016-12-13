@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    background: url("img/confectionary.png");
+    background: url("img/confectionary.png") fixed;
 }
 a {
     word-break: break-all;
