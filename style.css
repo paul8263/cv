@@ -22,7 +22,7 @@ a {
     left: 0;
     width: 100%;
     background-color: #1B9CE2;
-    box-shadow: darkgray 3px 3px 5px 0;
+    box-shadow: #737373 0 3px 5px 0;
     position: fixed;
 }
 
